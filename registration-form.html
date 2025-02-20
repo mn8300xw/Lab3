@@ -20,46 +20,46 @@
 <div class="row">
 
     <div class="row-md-7 col-md-7">
-        <label for="output">Name:</label>
+        <label for="name">Name:</label>
         <input class="form-control" id="name" type="text" maxlength="70" required>
         <br>
-        <label for="output">Email:</label>
-        <input class="form-control" id="email" type="text" required>
+        <label for="email">Email:</label>
+        <input class="form-control" id="email" type="email" required>
         <br>
-        <label for="output">Password:</label>
+        <label for="password">Password:</label>
         <input class="form-control" id="password" type="password" required>
         <br>
-        <label for="output">Shirt Size:</label>
+        <label for="t-shirt-size">Shirt Size:</label>
         <select name="t-shirt-size" id="t-shirt-size">
             <option value="Small">Small</option>
             <option value="Medium">Medium</option>
             <option value="Large">Large</option>
-            <option value="X-Large">X-Large</option>
-            <option value="2X-Large">2X-Large</option>
-            <option value="3X-Large">3X-Large</option>
         </select>
-        <br>
-        <label for="output">Date of Birth:</label>
+        <br><br>
+        <label for="dob">Date of Birth:</label>
         <input class="form-control" id="dob" type="date" required>
-
-        <div class="row-md-7 col-md-7">
-            <label for="output">Comments:</label>
-            <br>
-            <textarea id="output" rows="10" cols="50" placeholder="Input your feedback here..."></textarea>
-            <br>
-        </div>
-        <form>
-            <label for="output">Would you like to receive email updates?</label>
-            <br>
-            <input id="current_yes" name="updates" type="radio">Yes
-            <br>
-            <input id="current_no" name="updates" type="radio">No
-            <br>
-            <input class="btn btn-primary mt-2" id="submit" type="submit" value="Submit">
-        </form>
-        <label for="output">Special Requests:</label>
         <br>
-        <textarea cols="30" rows="10"></textarea>
+        <form>
+            <p>Would you like to receive email updates?</p>
+            <br>
+            <label for="current_yes">Yes</label>
+            <input id="current_yes" name="updates" type="radio">
+            <br>
+            <label for="current_no">No</label>
+            <input id="current_no" name="updates" type="radio">
+            <br><br>
+            <p>When will you be attending?</p>
+            <label for="morning">Morning</label>
+            <input id="morning" name="updates" type="checkbox">
+            <label for="afternoon">Afternoon</label>
+            <input id="afternoon" name="updates" type="checkbox">
+            <br>
+        </form>
+        <br>
+        <label for="special_requests">Special Requests:</label>
+        <br>
+        <textarea cols="70" rows="7" id="special_requests"></textarea>
+        <input class="btn btn-primary mt-2" id="submit" type="submit" value="Submit">
     </div>
 </div>
 </body>
