@@ -17,7 +17,7 @@
 <div class="header">
     <h1>Conference Registration Form</h1>
 </div>
-<div class="row">
+<form class="row g-3 needs-validation" novalidate>
 
     <div class="row-md-7 col-md-7">
         <label for="name">Name:</label>
@@ -61,6 +61,30 @@
         <textarea cols="70" rows="7" id="special_requests"></textarea>
         <input class="btn btn-primary mt-2" id="submit" type="submit" value="Submit">
     </div>
-</div>
+</form>
+
+
+<script>
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        let forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
 </body>
 </html>
