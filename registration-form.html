@@ -13,21 +13,21 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+<body class="m-3">
 <div class="header">
     <h1>Conference Registration Form</h1>
 </div>
-<form class="row g-3 needs-validation" novalidate>
+<form class="row g-3">
 
     <div class="row-md-7 col-md-7">
         <label for="name">Name:</label>
-        <input class="form-control" id="name" type="text" maxlength="70" required>
+        <input class="form-control" id="name" name="name" type="text" maxlength="70" required>
         <br>
         <label for="email">Email:</label>
-        <input class="form-control" id="email" type="email" required>
+        <input class="form-control" id="email" name="email" type="email" required>
         <br>
         <label for="password">Password:</label>
-        <input class="form-control" id="password" type="password" required>
+        <input class="form-control" id="password" name="password" type="password" required>
         <br>
         <label for="t-shirt-size">Shirt Size:</label>
         <select name="t-shirt-size" id="t-shirt-size">
@@ -37,9 +37,9 @@
         </select>
         <br><br>
         <label for="dob">Date of Birth:</label>
-        <input class="form-control" id="dob" type="date" required>
+        <input class="form-control" name="dob" id="dob" type="date" required>
         <br>
-        <form>
+
             <p>Would you like to receive email updates?</p>
             <br>
             <label for="current_yes">Yes</label>
@@ -54,37 +54,14 @@
             <label for="afternoon">Afternoon</label>
             <input id="afternoon" name="updates" type="checkbox">
             <br>
-        </form>
+
         <br>
         <label for="special_requests">Special Requests:</label>
         <br>
-        <textarea cols="70" rows="7" id="special_requests"></textarea>
+        <textarea cols="70" rows="7" name="special_requests" id="special_requests"></textarea>
         <input class="btn btn-primary mt-2" id="submit" type="submit" value="Submit">
     </div>
 </form>
-
-
-<script>
-    (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        let forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })()
-</script>
 
 </body>
 </html>

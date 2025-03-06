@@ -7,44 +7,49 @@
     <link rel="stylesheet" href="../Lab3/style2.css">
     <title>Student Feedback</title>
 </head>
-<body>
-<div class="header">
-<h1>Student Feedback</h1>
-</div>
-<div>
-<label for="output">Name:</label>
-<input class="form-control" id="name" type="text" maxlength="70" required>
-<br>
-<label for="output">Email:</label>
-<input class="form-control" id="email" type="text" required>
-<br>
-</div>
-<label for="output">Feedback:</label>
-<br>
-<textarea id="output" rows="10" cols="50" placeholder="Input your feedback here..."></textarea>
-<br>
-<div class="form-check row-lg-1 col-lg-6" >
-<form>
-  <label for="output">Are you a current student?</label>
-  <br>
-  <input id="current_yes" name="current" type="radio">Yes
-  <br>
-  <input id="current_no" name="current" type="radio">No
-  <br>
-  <input class="btn btn-primary mt-2" id="submit" type="submit" value="Submit">
-</form>
-</div>
-<div class="col-lg-6 row-lg-1">
-<label for="output">Instructions:</label>
-<br>
+<body class="m-3">
+    <div class="header">
+        <h1>Student Feedback</h1>
+    </div>
+    <form>
+        <div>
+            <label for="name">Name:</label>
+            <input class="form-control" id="name" type="text" maxlength="70" required>
+            <br>
+            <label for="email">Email:</label>
+            <input class="form-control" id="email" type="text" required>
+            <br>
+        </div>
+        <label for="feedback">Feedback:</label>
+        <br>
+        <textarea id="feedback" rows="10" cols="50" placeholder="Input your feedback here..."></textarea>
+        <br>
+        <div class="form-check row-lg-1 col-lg-6" >
 
-<textarea id="instructions" rows="10" cols="50"></textarea>
-</div>
+            <p>Are you a current student?</p>
+            <label for="current_yes">Yes</label>
+            <input id="current_yes" name="current" type="radio">
+            <br>
+            <label for="current_no">No</label>
+            <input id="current_no" name="current" type="radio">
+            <br>
+            <p>When will you be attending?</p>
+            <label for="morning">Morning</label>
+            <input id="morning" name="updates" type="checkbox">
+            <label for="afternoon">Afternoon</label>
+            <input id="afternoon" name="updates" type="checkbox">
+            <br>
+        </div>
+        <div class="col-lg-6 row-lg-1">
+            <label for="instructions">Instructions:</label>
+            <br>
+            <textarea id="instructions" rows="10" cols="50"></textarea>
+            <br>
+        </div>
+    </form>
+    <input class="btn btn-primary mt-2" id="submit" type="submit" value="Submit">
 
-<script>
-
-
-
-</script>
+    <script>
+    </script>
 </body>
 </html>
